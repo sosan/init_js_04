@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <main class="imagen_centro">
+        <!-- <img src="./img/restuarante.svg" alt=""> -->
+        <button id="btn_pedir_platos" class="color-rojo">ABRIR MENU</button>
+        <!-- Caja -->
+        <section id="menu_emergente" class="caja-principal invisible">
+            <!-- background -->
+            <div class="caja-background"></div>
+            <!-- caja con elementos -->
+            <ul class="caja-contenido-elementos">
+                <li class="caja-header">
+                    <p class="texto-ventana">HOLA! BIENVENIDO</p>
+                    <button id="btn_cerrar_ventana" class="cerrar-ventana">X</button>
+                </li>
+                <li class="caja-texto-contenido">
+                    <h1>SELECCIONE UNA OPCION DEL MENU</h1>
+                    <ul class="seleccion-botones">
+                        <li class="fila-botones">
+                            <span id="" class="seleccion-boton">costillas</span>
+                            <span id="" class="seleccion-boton precio-unidad">25 €</span>
+                            <button id="btn_menos_costillas" class="seleccion-boton seleccion-boton-menos">-</button>
+                            <input class="seleccion-texto" name="cantidad_costillas" id="cantidad_costillas" value="0" type="number">
+                            <button id="btn_mas_costillas" class="seleccion-boton seleccion-boton-mas">+</button>
+                            <span id="subtotal-precio-costillas" class="seleccion-boton subtotal-elemento">0 €</span>
+                        </li>
+                        <li class="fila-botones">
+                            <span id="" class="seleccion-boton">patatas</span>
+                            <span id="" class="seleccion-boton precio-unidad">6 €</span>
+                            <button id="btn_menos_patatas" class="seleccion-boton seleccion-boton-menos">-</button>
+                            <input class="seleccion-texto" name="cantidad_patatas" id="cantidad_patatas" value="0" type="number">
+                            <button id="btn_mas_patatas" class="seleccion-boton seleccion-boton-mas">+</button>
+                            <span id="subtotal-precio-patatas" class="seleccion-boton subtotal-elemento">0 €</span>
+                        </li>
+                        <li  class="fila-botones">
+                            <span id="" class="seleccion-boton">vino tinto</span>
+                            <span id="" class="seleccion-boton precio-unidad">21 €</span>
+                            <button id="btn_menos_vinotinto" class="seleccion-boton seleccion-boton-menos">-</button>
+                            <input class="seleccion-texto" name="cantidad_vino_tinto" id="cantidad_vino_tinto" value="0" type="number">
+                            <button id="btn_mas_vinotinto" class="seleccion-boton seleccion-boton-mas">+</button>
+                            <span id="subtotal-precio-vinotinto" class="seleccion-boton subtotal-elemento">0 €</span>
+                        </li>
+                        <li class="fila-botones">
+                            <span id="" class="seleccion-boton">postre</span>
+                            <span id="" class="seleccion-boton precio-unidad">18 €</span>
+                            <button id="btn_menos_postre" class="seleccion-boton seleccion-boton-menos">-</button>
+                            <input class="seleccion-texto" name="cantidad_postre" id="cantidad_postre" value="0" type="number">
+                            <button id="btn_mas_postre" class="seleccion-boton seleccion-boton-mas">+</button>
+                            <span id="subtotal-precio-postre" class="seleccion-boton subtotal-elemento">0 €</span>
+                        </li>
+                        <li class="fila-resultados">
+                            <span id="total" class="seleccion-boton seleccion-boton-grande resultado-elemento">SUBTOTAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 €</span>
+                        </li>
+                    </ul>
+                </li>
+                <li class="caja-footer">
+                    <button id="btn_pedir_comanda" class="color-verde">PEDIR PLATOS</button>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+    <script src="menu.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

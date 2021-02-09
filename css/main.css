@@ -1,0 +1,359 @@
+/* REEESETT  */
+ul
+{
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+/* ------ QUITAR LAS FLECHAS DE ARRIBA DE LOS INPUTS CON NUMEROS -------------------- */
+/* https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number]
+{
+    -moz-appearance: textfield;
+}
+/* ------------------------------- */
+
+
+
+
+
+html
+{
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(253, 224, 208);
+    color: rgb(253, 224, 208);
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+body
+{
+
+    width: 100%;
+    height: 100%;
+    
+    display: grid;
+    grid-template-columns: 50px minmax(1000px, 1000px) 50px;
+    grid-template-rows: 100vh;
+    grid-template-areas: 
+    ". c ."
+    ;
+    
+}
+
+
+.imagen_centro
+{
+    grid-area: c;
+    background-image: url("../img/restuarante.svg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: contain;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+
+}
+
+.caja-principal
+{
+
+    align-items: center;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+
+
+}
+
+.caja-background
+{
+    background-color: rgba(10, 10, 10, 0.775);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+
+.caja-contenido-elementos
+{
+
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 40px);
+    overflow: hidden;
+    margin: 0 auto;
+    width: 640px;
+    position: relative;
+
+    font-size: 1.125rem;
+}
+
+
+.caja-header
+{
+    position: relative;
+
+    background-color: rgb(34, 36, 37);
+    border-bottom: 1px solid #dbdbdb;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    font-size: 1.5rem;
+
+    display: grid;
+    grid-template-columns: 20px 1fr 60px ;
+    grid-template-areas: ". h c";
+}
+
+.texto-ventana
+{
+    grid-area: h;
+
+}
+
+.cerrar-ventana
+{
+    grid-area: c;
+    position: relative;
+
+    margin: 0;
+    padding: 0;
+
+    color: whitesmoke;
+    background-color: black;
+
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    
+    width: 30px;
+    height: 30px;
+
+    font-size: 1em;
+
+    align-self: center;
+    justify-self: center;
+
+}
+
+
+.caja-texto-contenido
+{
+    
+
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: auto;
+    padding: 20px;
+
+    background-color: rgb(30, 31, 32);
+
+    display: block;
+
+
+}
+
+.fila-botones
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+.caja-footer
+{
+    position: relative;
+    background-color: rgb(34, 36, 37);
+    border-bottom: 1px solid #dbdbdb;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size: 1.5rem;
+    display: grid;
+    /* grid-template-columns: 20px 1fr 60px;
+    grid-template-areas: ". h c"; */
+
+}
+
+.color-verde
+{
+    background-color: rgb(40, 126, 50);
+
+    color: rgb(180, 178, 176);
+    font-size: 1em;
+    font-weight: bolder;
+    height: auto;
+    padding: .75em 1.25em;
+    border-width: 1px;
+
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+
+    border: 1px solid transparent;
+    border-radius: 0.4em;
+
+    justify-self: center;
+    width: 80%;
+
+
+}
+
+.seleccion-botones
+{
+    /* padding-inline-start: 40px; */
+}
+
+.seleccion-boton
+{
+    background-color: rgb(46, 120, 95);
+    color: rgb(243, 243, 243);
+
+    font-size: 1em;
+
+    font-weight: 600;
+    padding: 0.75em 1em;
+
+    border-width: 1px;
+    /* cursor: pointer; */
+    
+    min-width: 34px;
+    max-width: 82px;
+    
+    border: 1px solid transparent;
+    border-radius: 0.4em;
+
+    margin-bottom: 1em;
+}
+
+
+.seleccion-texto
+{
+
+    height: 42px;
+    padding-left: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    max-width: 60px;
+}
+
+
+
+.seleccion-boton-menos
+{
+    background-color: rgb(233, 44, 44);
+    margin-left: 2em;
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+.seleccion-boton-mas
+{
+    cursor: pointer;
+    margin-left: 1em;
+    margin-right: 1em;
+    background-color: rgb(15, 111, 31);
+}
+
+.precio-unidad
+{
+    margin-left: 1em;
+}
+
+.subtotal-elemento
+{
+    background-color: rgb(120 79 46);
+    color: rgb(243, 243, 243);
+}
+
+.fila-resultados
+{
+
+        display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    
+}
+
+.seleccion-boton-grande
+{
+    min-width: 275px;
+    max-width: 275px;
+    
+    text-align: end;
+
+}
+
+.resultado-elemento
+{
+    background-color: rgb(120 79 46);
+    color: rgb(243, 243, 243);
+}
+
+
+
+
+.color-rojo
+{
+    background-color: rgb(197, 61, 20);
+    color: rgb(243, 243, 243);
+
+    font-size: 1em;
+
+    font-weight: bold;
+    padding: 0.75em 1.25em;
+
+    border-width: 1px;
+    cursor: pointer;
+    /* justify-content: center;
+    text-align: center; */
+    border: 1px solid transparent;
+    border-radius: 0.4em;
+    
+    /* colocacion un poco chapucera, para no usar un top-botoom-left */
+    margin-top: 21%;
+    margin-left: 3%;
+
+}
+
+
+.visible
+{
+    display: flex;
+}
+
+.invisible
+{
+    display: none;
+}

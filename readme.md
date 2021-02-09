@@ -1,7 +1,7 @@
 ## Web Link
 
 
-[Imagen](./img/muestra.png)
+![Imagen](./img/muestra.png)
 
 https://stoic-banach-562cfe.netlify.app/
 
